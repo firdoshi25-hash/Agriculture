@@ -1,0 +1,997 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Fasal Suraksha Guide: fasal ke risks, bachav, crop insurance claim steps aur kheti ke profit-loss ko aasaan bhasha mein samjhein.">
+
+  <meta name="theme-color" content="#075c3b">
+
+  <title>Fasal Suraksha Guide | Kisan ki Fasal, Kisan ki Suraksha</title>
+
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Seedha content par jaayein</a>
+
+  <header class="site-header">
+    <div class="container navbar">
+
+      <a href="#home" class="brand" aria-label="Fasal Suraksha Guide home">
+        <span class="brand-mark">🌿</span>
+
+        <span>
+          Fasal <b>Suraksha</b>
+          <small>GUIDE FOR FARMERS</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Navigation kholein"
+        aria-expanded="false"
+        aria-controls="navLinks"
+        type="button"
+      >
+        ☰
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#crops">Fasalein</a>
+        <a href="#risks">Risk Guide</a>
+        <a href="#claims">Claim Guide</a>
+        <a href="#calculator">Calculator</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a class="header-help" href="tel:14447">
+        ☎ <span>Helpline 14447</span>
+      </a>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO SECTION -->
+
+    <section class="hero" id="home">
+
+      <div
+        class="hero-image"
+        role="img"
+        aria-label="Hare-bhare kheton mein kisan"
+      ></div>
+
+      <div class="hero-shade"></div>
+
+      <div class="container hero-content">
+
+        <div class="eyebrow">
+          <span>✦</span>
+          Kisan ki Fasal, Kisan ki Suraksha
+        </div>
+
+        <h1>
+          Fasal ki raksha,<br>
+          <span>mehnat ki suraksha.</span>
+        </h1>
+
+        <p>
+          Fasal ke risks samjhein, nuksan ke baad kya karna hai jaanein,
+          aur crop insurance ko aasaan bhasha mein samjhein.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#crops" class="button">
+            Apni Fasal Jaanein <span>↗</span>
+          </a>
+
+          <a href="#claims" class="button button-light">
+            Claim Guide Dekhein
+          </a>
+        </div>
+
+        <div class="hero-trust">
+          <span>Aasaan jaankari</span>
+          <span>Step-by-step guide</span>
+          <span>Hindi-friendly</span>
+        </div>
+
+      </div>
+
+      <div class="hero-note">
+        <span>🌱</span>
+
+        <div>
+          <b>Jaankari se taiyari</b>
+          <small>Har mausam mein behtar faisle</small>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- STATE AND CROP SECTION -->
+
+    <section class="section crops-section" id="crops">
+
+      <div class="container">
+
+        <div class="section-heading heading-left">
+
+          <span class="section-icon">🌾</span>
+
+          <div>
+            <p class="eyebrow dark-eyebrow">APNI KHETI KO JAANEIN</p>
+
+            <h2>Apna state aur fasal chunein</h2>
+
+            <p>
+              State aur season ke hisaab se kuch pramukh fasalon ke
+              examples dekhein.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="crop-panel">
+
+          <div class="form-grid">
+
+            <div class="field">
+              <label for="stateSelect">📍 Apna state chunein</label>
+
+              <select id="stateSelect">
+                <option value="bihar">Bihar</option>
+                <option value="punjab">Punjab</option>
+                <option value="haryana">Haryana</option>
+                <option value="uttar-pradesh">Uttar Pradesh</option>
+                <option value="himachal-pradesh">Himachal Pradesh</option>
+                <option value="maharashtra">Maharashtra</option>
+                <option value="rajasthan">Rajasthan</option>
+                <option value="madhya-pradesh">Madhya Pradesh</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="seasonSelect">🗓️ Fasal ka season</label>
+
+              <select id="seasonSelect">
+                <option value="all">Sabhi fasalein</option>
+                <option value="kharif">Kharif</option>
+                <option value="rabi">Rabi</option>
+              </select>
+            </div>
+
+          </div>
+
+          <div class="crop-results" aria-live="polite">
+
+            <div class="results-top">
+              <h3 id="cropHeading">Bihar ki pramukh fasalein</h3>
+
+              <span class="live-badge">● Example crops</span>
+            </div>
+
+            <div class="crop-list" id="cropList"></div>
+
+            <p class="note" id="cropNote">
+              Faslon ki availability district aur season ke hisaab se
+              alag ho sakti hai.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CROP RISKS SECTION -->
+
+    <section class="section section-tint" id="risks">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow dark-eyebrow">RISK KO PEHCHAANEIN</p>
+
+          <h2>Fasal ke risk aur bachav</h2>
+
+          <p>
+            Kisi bhi card par click karke us risk ke lakshan,
+            turant karne wale kaam aur bachav ke tareeqe padhein.
+          </p>
+
+        </div>
+
+        <div class="risk-grid">
+
+          <button
+            class="risk-card"
+            type="button"
+            data-risk="drought"
+            aria-expanded="false"
+            aria-controls="riskDetail"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=700&q=80"
+              alt="Kheti aur zameen ka landscape"
+              loading="lazy"
+            >
+
+            <span class="risk-card-body">
+
+              <span class="risk-title-row">
+                <span class="risk-emoji">☀️</span>
+                <b>Sookha / Kam baarish</b>
+                <span class="card-arrow">↗</span>
+              </span>
+
+              <small>Paani ki kami aur murjhate paudhe</small>
+
+              <span class="card-hint">Details dekhein +</span>
+
+            </span>
+
+          </button>
+
+
+          <button
+            class="risk-card"
+            type="button"
+            data-risk="flood"
+            aria-expanded="false"
+            aria-controls="riskDetail"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=700&q=80"
+              alt="Paani aur natural landscape"
+              loading="lazy"
+            >
+
+            <span class="risk-card-body">
+
+              <span class="risk-title-row">
+                <span class="risk-emoji">🌊</span>
+                <b>Baadh / Waterlogging</b>
+                <span class="card-arrow">↗</span>
+              </span>
+
+              <small>Khet mein zyada paani jama hona</small>
+
+              <span class="card-hint">Details dekhein +</span>
+
+            </span>
+
+          </button>
+
+
+          <button
+            class="risk-card"
+            type="button"
+            data-risk="hail"
+            aria-expanded="false"
+            aria-controls="riskDetail"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1517299321609-52687d1bc55a?auto=format&fit=crop&w=700&q=80"
+              alt="Barf aur ole jaise ice pellets"
+              loading="lazy"
+            >
+
+            <span class="risk-card-body">
+
+              <span class="risk-title-row">
+                <span class="risk-emoji">🧊</span>
+                <b>Ole / Tez aandhi</b>
+                <span class="card-arrow">↗</span>
+              </span>
+
+              <small>Patton, phool aur danon ko nuksan</small>
+
+              <span class="card-hint">Details dekhein +</span>
+
+            </span>
+
+          </button>
+
+
+          <button
+            class="risk-card"
+            type="button"
+            data-risk="pests"
+            aria-expanded="false"
+            aria-controls="riskDetail"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1563207153-f403bf289096?auto=format&fit=crop&w=700&q=80"
+              alt="Paudhe par keet"
+              loading="lazy"
+            >
+
+            <span class="risk-card-body">
+
+              <span class="risk-title-row">
+                <span class="risk-emoji">🐛</span>
+                <b>Keet / Pests</b>
+                <span class="card-arrow">↗</span>
+              </span>
+
+              <small>Patton mein chhed ya keet dikhna</small>
+
+              <span class="card-hint">Details dekhein +</span>
+
+            </span>
+
+          </button>
+
+
+          <button
+            class="risk-card"
+            type="button"
+            data-risk="disease"
+            aria-expanded="false"
+            aria-controls="riskDetail"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=700&q=80"
+              alt="Hari bhari fasal aur paudhe"
+              loading="lazy"
+            >
+
+            <span class="risk-card-body">
+
+              <span class="risk-title-row">
+                <span class="risk-emoji">🍃</span>
+                <b>Fasal ki bimari</b>
+                <span class="card-arrow">↗</span>
+              </span>
+
+              <small>Daag, peela pan ya paudhe ka sadna</small>
+
+              <span class="card-hint">Details dekhein +</span>
+
+            </span>
+
+          </button>
+
+
+          <button
+            class="risk-card"
+            type="button"
+            data-risk="rain"
+            aria-expanded="false"
+            aria-controls="riskDetail"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1433863448220-78aaa064ff47?auto=format&fit=crop&w=700&q=80"
+              alt="Badal aur baarish ka mausam"
+              loading="lazy"
+            >
+
+            <span class="risk-card-body">
+
+              <span class="risk-title-row">
+                <span class="risk-emoji">🌧️</span>
+                <b>Be-mausam baarish</b>
+                <span class="card-arrow">↗</span>
+              </span>
+
+              <small>Katai ya sukhai ke waqt baarish</small>
+
+              <span class="card-hint">Details dekhein +</span>
+
+            </span>
+
+          </button>
+
+        </div>
+
+        <div
+          class="risk-detail"
+          id="riskDetail"
+          hidden
+          aria-live="polite"
+        ></div>
+
+        <p class="section-footnote">
+          Note: Sahi upay fasal, mausam aur risk ki pehchan par depend
+          karta hai. Dawa ka istemal krishi visheshagya ki salah aur
+          product label ke mutabik karein.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- CLAIM GUIDE SECTION -->
+
+    <section class="section" id="claims">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow dark-eyebrow">NUKSAN KE BAAD KYA KAREIN?</p>
+
+          <h2>Crop insurance claim: step by step</h2>
+
+          <p>
+            Photos aur simple instructions ke saath claim process ke
+            important steps samjhein.
+          </p>
+
+        </div>
+
+        <div class="claim-timeline">
+
+          <article class="claim-step">
+
+            <div class="step-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80"
+                alt="Khet aur fasal ka record"
+                loading="lazy"
+              >
+
+              <span>01</span>
+
+            </div>
+
+            <div class="step-content">
+
+              <span class="step-label">STEP 01</span>
+
+              <h3>Nuksan ka record rakhein</h3>
+
+              <p>
+                Prabhavit fasal aur khet ki clear photos/videos lein.
+                Nuksan ki tareekh, gaon, fasal aur khet ki details likhein.
+                Alag-alag angles se tasveerein rakhein.
+              </p>
+
+              <div class="step-tip">
+                ✓ Original photos aur date sambhal kar rakhein.
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="claim-step">
+
+            <div class="step-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+                alt="Office building, report karne ka visual"
+                loading="lazy"
+              >
+
+              <span>02</span>
+
+            </div>
+
+            <div class="step-content">
+
+              <span class="step-label">STEP 02</span>
+
+              <h3>Nuksan report karein</h3>
+
+              <p>
+                Policy ke instructions dekhein aur insurer, bank,
+                local agriculture office ya official channel se
+                jaldi sampark karein. Reporting deadline rules ke
+                mutabik alag ho sakti hai.
+              </p>
+
+              <div class="step-tip">
+                ✓ Complaint ya reference number note karein.
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="claim-step">
+
+            <div class="step-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80"
+                alt="Documents aur paperwork"
+                loading="lazy"
+              >
+
+              <span>03</span>
+
+            </div>
+
+            <div class="step-content">
+
+              <span class="step-label">STEP 03</span>
+
+              <h3>Documents taiyar karein</h3>
+
+              <p>
+                Policy/application receipt, identity details,
+                bank details aur fasal/khet se jude records taiyar rakhein.
+                Sirf official process mein maange gaye documents share karein.
+              </p>
+
+              <div class="step-tip">
+                ✓ Documents ki clear copies sambhal kar rakhein.
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="claim-step">
+
+            <div class="step-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+                alt="Laptop par online status check karna"
+                loading="lazy"
+              >
+
+              <span>04</span>
+
+            </div>
+
+            <div class="step-content">
+
+              <span class="step-label">STEP 04</span>
+
+              <h3>Assessment aur status check</h3>
+
+              <p>
+                Inspection ya assessment ke liye maangi gayi jaankari dein.
+                Reference number se official channel par status check karein.
+                Delay ho toh complaint details ke saath follow-up karein.
+              </p>
+
+              <div class="step-tip">
+                ✓ Claim approval ya payment guaranteed nahi hota.
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <div class="documents-panel">
+
+          <div>
+            <p class="eyebrow">READY RAKHEIN</p>
+
+            <h3>📋 Documents checklist</h3>
+
+            <p class="muted">
+              Exact list claim aur scheme rules par depend karti hai.
+            </p>
+          </div>
+
+          <ul class="checklist">
+            <li>Identity details, jaise Aadhaar—agar maanga jaaye</li>
+            <li>Crop insurance policy/application receipt</li>
+            <li>Bank account details, agar required hon</li>
+            <li>Fasal, season aur khet ki details</li>
+            <li>Nuksan ki photos aur tareekh</li>
+            <li>Land/cultivation proof, agar maanga jaaye</li>
+          </ul>
+
+          <a
+            class="button"
+            href="https://pmfby.gov.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Official PMFBY Portal ↗
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROFIT LOSS CALCULATOR -->
+
+    <section class="section calculator-section" id="calculator">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow dark-eyebrow">APNA ANDAAZA LAGAYEIN</p>
+
+          <h2>Profit / loss calculator</h2>
+
+          <p>
+            Sample data pehle se diya gaya hai. Apne khet ke hisaab se
+            values badal kar calculation kar sakte hain.
+          </p>
+
+        </div>
+
+        <div class="calculator-layout">
+
+          <div class="card calculator-fields">
+
+            <div class="field">
+              <label for="costInput">Kul kheti ka kharcha (₹)</label>
+
+              <input
+                type="number"
+                id="costInput"
+                min="0"
+                step="100"
+                value="30000"
+              >
+            </div>
+
+            <div class="field">
+              <label for="incomeInput">
+                Nuksan se pehle expected kamai (₹)
+              </label>
+
+              <input
+                type="number"
+                id="incomeInput"
+                min="0"
+                step="100"
+                value="50000"
+              >
+            </div>
+
+            <div class="field">
+              <label for="lossInput">Estimated crop loss (%)</label>
+
+              <input
+                type="number"
+                id="lossInput"
+                min="0"
+                max="100"
+                step="1"
+                value="40"
+              >
+            </div>
+
+            <div class="field">
+              <label for="premiumInput">Insurance premium (₹)</label>
+
+              <input
+                type="number"
+                id="premiumInput"
+                min="0"
+                step="50"
+                value="500"
+              >
+            </div>
+
+            <div class="field">
+              <label for="payoutInput">Assumed insurance payout (₹)</label>
+
+              <input
+                type="number"
+                id="payoutInput"
+                min="0"
+                step="100"
+                value="10000"
+              >
+            </div>
+
+            <button
+              type="button"
+              class="button calculate-button"
+              id="calculateButton"
+            >
+              ▦ Calculate karein
+            </button>
+
+            <button
+              type="button"
+              class="reset-button"
+              id="resetCalculator"
+            >
+              Sample values reset karein
+            </button>
+
+          </div>
+
+
+          <div class="result-box" aria-live="polite">
+
+            <div class="result-title">
+
+              <span class="result-icon">₹</span>
+
+              <div>
+                <h3>Estimated result</h3>
+                <p>Aapke enter kiye hue numbers par based</p>
+              </div>
+
+            </div>
+
+            <div class="result-row">
+              <span>Loss ke baad estimated kamai</span>
+              <strong id="reducedIncome">₹30,000</strong>
+            </div>
+
+            <div class="result-row">
+              <span>Bina insurance net result</span>
+              <strong id="withoutInsurance">₹0</strong>
+            </div>
+
+            <div class="result-row">
+              <span>Insurance premium</span>
+              <strong id="premiumCost">₹500</strong>
+            </div>
+
+            <div class="result-row">
+              <span>Assumed insurance payout</span>
+              <strong id="payoutResult">₹10,000</strong>
+            </div>
+
+            <div class="result-highlight">
+
+              <p>Insurance ke saath estimated net result</p>
+
+              <strong id="withInsurance">₹9,500</strong>
+
+              <p id="comparisonText">
+                Sample estimate.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="calculator-note">
+          ⚠️ Ye educational estimate hai, official claim calculation nahi.
+          Actual payout policy, notified crop/area, assessment aur scheme
+          rules par depend karta hai. Enter kiya gaya payout guaranteed
+          insurance amount nahi hai.
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FAQ AND OFFICIAL CONTACT -->
+
+    <section class="section faq-section" id="faq">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow dark-eyebrow">SAWAL AUR JAWAB</p>
+
+          <h2>Crop insurance FAQ</h2>
+
+          <p>
+            Crop insurance ke common sawalon ke detail mein jawab.
+          </p>
+
+        </div>
+
+        <div class="faq-layout">
+
+          <div class="faq-list">
+
+            <details>
+              <summary>Crop insurance ka fayda kya hai?</summary>
+
+              <p>
+                Crop insurance kuch covered risks se hone wale eligible
+                fasal ke nuksan par financial support de sakta hai.
+                Kaun se risks covered hain, eligibility kya hai aur claim
+                kaise assess hoga—ye aapki policy aur current scheme rules
+                par depend karta hai. Har tarah ka nuksan automatically
+                covered nahi hota.
+              </p>
+            </details>
+
+
+            <details>
+              <summary>Kya har kisan aur har fasal eligible hoti hai?</summary>
+
+              <p>
+                Zaroori nahi. Notified crop, area, season, scheme rules
+                aur policy/enrolment status check karna hota hai.
+                Apne district ki current notification aur official portal,
+                bank ya insurer se eligibility confirm karein.
+              </p>
+            </details>
+
+
+            <details>
+              <summary>Fasal ka nuksan hone par sabse pehle kya karun?</summary>
+
+              <p>
+                Nuksan ki photos/videos, tareekh, location aur crop details
+                sambhal kar rakhein. Apni policy ke instructions dekhein
+                aur relevant insurer ya official channel ko jaldi report
+                karein, kyunki reporting deadlines ho sakti hain.
+                Complaint/reference number note karna na bhoolein.
+              </p>
+            </details>
+
+
+            <details>
+              <summary>Claim ke liye kaun se documents chahiye?</summary>
+
+              <p>
+                Case ke hisaab se policy/application receipt, identity
+                details, bank details, crop/field records, damage evidence
+                aur cultivation/land proof maange ja sakte hain.
+                Ye universal final list nahi hai. Apne claim ke official
+                requirements confirm karein.
+              </p>
+            </details>
+
+
+            <details>
+              <summary>Claim kitna milega aur kab milega?</summary>
+
+              <p>
+                Amount aur timeline policy terms, notified crop/area,
+                loss assessment, required verification aur scheme rules
+                par depend karte hain. Is website ka calculator sirf
+                user-entered example calculate karta hai. Ye official
+                estimate, claim approval ya payment date nahi batata.
+              </p>
+            </details>
+
+
+            <details>
+              <summary>Claim reject ya delay ho toh kya karein?</summary>
+
+              <p>
+                Official channel par status aur rejection/delay ka reason
+                poochhein. Application/reference number, policy details
+                aur pehle ki complaint information sambhal kar rakhein.
+                Policy mein diya grievance process follow karein aur
+                official portal/helpline se current escalation steps
+                confirm karein.
+              </p>
+            </details>
+
+
+            <details>
+              <summary>Insurance premium kaise calculate hota hai?</summary>
+
+              <p>
+                Premium crop, season, location, insured amount aur
+                applicable scheme/policy rules par depend karta hai.
+                Is page ka calculator premium calculate nahi karta.
+                Premium field mein apni policy ya official source se
+                mili amount enter karein.
+              </p>
+            </details>
+
+
+            <details>
+              <summary>Kya is website se claim file ho jayega?</summary>
+
+              <p>
+                Nahi. Ye educational guide hai, official government
+                portal nahi. Claim submit karne, eligibility confirm
+                karne aur latest rules dekhne ke liye official PMFBY
+                portal, insurer, bank ya local agriculture office ka
+                use karein.
+              </p>
+            </details>
+
+          </div>
+
+
+          <aside class="contact-card">
+
+            <span class="contact-symbol">☎</span>
+
+            <p class="eyebrow">OFFICIAL SUPPORT</p>
+
+            <h3>Crop insurance help</h3>
+
+            <p class="helpline-number">14447</p>
+
+            <p>
+              Krishi Rakshak Portal aur helpline ki current details
+              official portal par verify karein.
+            </p>
+
+            <a class="button full-button" href="tel:14447">
+              Call 14447
+            </a>
+
+            <a
+              class="button button-outline full-button"
+              href="https://pmfby.gov.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              PMFBY Official Website ↗
+            </a>
+
+            <p class="tiny-note">
+              Helpline availability aur instructions badal sakte hain.
+              Official website par confirm karein.
+            </p>
+
+          </aside>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-inner">
+
+      <a href="#home" class="brand footer-brand">
+
+        <span class="brand-mark">🌿</span>
+
+        <span>
+          Fasal <b>Suraksha</b>
+          <small>GUIDE FOR FARMERS</small>
+        </span>
+
+      </a>
+
+      <p>Kisan ki jaankari, kisan ki suraksha.</p>
+
+      <p class="disclaimer">
+        Educational project. Ye government website nahi hai aur
+        claim approval ya payment ki guarantee nahi deta.
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
